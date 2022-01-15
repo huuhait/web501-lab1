@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header-menu li {
+    @apply inline-block;
+  }
+
+  .header-menu li a {
+    @apply text-white mx-4 inline-block text-sm;
+  }
+
+  .header-menu li a:hover {
+    @apply underline;
+  }
+
+  .container {
+    max-width: 980px;
+  }
+
+  .content-item {
+    @apply w-4/12 border px-9 py-4;
+  }
+
+  .content-item + .content-item {
+    @apply ml-8;
+  }
+
+  .content-item-img img {
+    @apply block;
+  }
+
+  .content-item-title {
+    @apply text-amber-600 font-bold my-2;
+  }
+
+  .content-item-text {
+    @apply text-sm;
+  }
+}
