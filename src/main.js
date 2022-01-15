@@ -1,20 +1,19 @@
-import { Navigo } from "navigo";
+import Navigo from "navigo";
+import Home from "./pages/Home";
+import News from "./pages/News";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const changeText = (text) => {
-  this.document.querySelector("js-link").innerText = text;
+const printHTML = (content) => {
+  document.getElementById("app").innerHTML = content;
 };
 
 router.on({
   "/": () => {
-    changeText("Trang chủ");
+    printHTML(Home.render());
   },
-  "/about": () => {
-    changeText("About");
-  },
-  "/product": () => {
-    changeText("Product");
+  "/news": () => {
+    printHTML(News.render());
   },
 });
 
