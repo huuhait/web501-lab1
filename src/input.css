@@ -27,7 +27,7 @@
     @apply ml-8;
   }
 
-  .content-item-img img {
+  .content-item-image img {
     @apply block;
   }
 
